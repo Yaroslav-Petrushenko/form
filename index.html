@@ -9,29 +9,31 @@
 </head>
 <body>
   <header>
+    <h1 class="title">Форми</h1>
     <div class="wrapper">
-      <h1 class="title">Форми</h1>
       <main class="main">
         <div class="form-1 flex">
           <form action="index.html">
             <h2>01. проста форма</h2>
             <input class="input" type="name" placeholder="Введіть ім’я">
             <input class="input" type="email" placeholder="Email">
-            <select class="input" name="choose-cyty" id="choose-cyty">
-              <option value="your-city">Ваше місто</option>
-              <option value="city">Суми</option>
-              <option value="city">Хмельницький</option>
-              <option value="city">Львів</option>
-              <option value="city">Харків</option>
-              <option value="city">Київ</option>
-            </select>
+            <div class="select">
+              <select class="input" name="choose-cyty" id="choose-cyty">
+                <option value="your-city">Ваше місто</option>
+                <option value="city">Суми</option>
+                <option value="city">Хмельницький</option>
+                <option value="city">Львів</option>
+                <option value="city">Харків</option>
+                <option value="city">Київ</option>
+              </select>
+            </div>
             <label>
               <textarea class="input" type="Email" placeholder="Email"></textarea>
             </label>
             <button class="submit">Зареєструватися</button>
           </form>
         </div>
-        <hr>
+        <hr class="hr">
         <div class="form-form">
           <form action="index.html">
             <h2>02. елементи</h2>
@@ -41,7 +43,7 @@
                 <label for="post">Нова Пошта</label>
                 <input type="radio" class="radio" id="courier" name="delivery">
                 <label for="courier">Кур’єр</label>
-                <input type="radio" class="radio-dis" id="self-pickup" name="delivery" disabled>
+                <input type="radio" class="radio none-active" id="self-pickup" name="delivery" disabled>
                 <label for="self-pickup">Самовивіз</label>
               </div>
               <div class="delivery-2 form">
@@ -49,18 +51,18 @@
                 <label for="contract">Прочитав умови договору</label>
                 <input type="checkbox" class="check-box" id="pdw" value="Згoдний з ПДВ 9%">
                 <label for="pdw">Згідний з ПДВ 9%</label>
-                <input type="checkbox" class="check-disabled" id="news" value="Отримувати новини на ел. пошту" disabled>
+                <input type="checkbox" class="check-box none-active" id="news" value="Отримувати новини на ел. пошту" disabled>
                 <label for="news">Отримувати новини на ел. пошту</label>
               </div>
               <div class="delivery-3 form">
                 <div class="status form">
                   <p>Статус</p>
                   <input type="checkbox" class="check-box" id="new" value="Новинки">
-                  <label for="new">Новинки</label>
+                  <label class="lab" for="new">Новинки</label>
                   <input type="checkbox" class="check-box" id="act" value="Акційні товари">
-                  <label for="act">Акційні товари</label>
+                  <label class="lab" for="act">Акційні товари</label>
                   <input type="checkbox" class="check-box" id="sale" value="Розпродаж">
-                  <label for="sale">Розпродаж</label>
+                  <label class="lab" for="sale">Розпродаж</label>
                 </div>
                 <div class="data form">
                   <p>Дата</p>
@@ -69,7 +71,7 @@
             </div>
             </div>
           </form>
-          <hr>
+          <hr class="hr">
         </div>
         <div class="form-3">
           <form action="index.html">
@@ -78,9 +80,9 @@
                 
                   <div class="gender form">
                     <input type="radio" name="gender" value="Чоловік" id="man">
-                    <label class="radio-man man" for="male">Чоловік</label>
+                    <label class="radio-man man" for="man">Чоловік</label>
                     <input type="radio" name="gender" value="Жінка" id="woman">
-                    <label class="radio-woman woman" for="female">Жінка</label>
+                    <label class="radio-woman woman" for="woman">Жінка</label>
                   </div>
                   
                     <div class="choice">
@@ -100,7 +102,7 @@
                   
               </div>
           </form>
-          <hr>
+          <hr class="hr">
         </div>
         <div class="form-4">
           <form action="index.html">
@@ -108,17 +110,17 @@
             <table class="table">
               <tr>
                   <td><label for="fio">ФІО:</label></td>
-                  <td><input class="pass" type="text" placeholder="Введіть ім’я" id="fio"></td>
+                  <td><input class="pass input" type="text" placeholder="Введіть ім’я" id="fio"></td>
               </tr>
               <tr>
                   <td><label for="password">Пароль:</label></td>
-                  <td><input class="pass" type="password" placeholder="Введіть не менше 6 символів" id="password"></td>
+                  <td><input class="pass input" type="password" placeholder="Введіть не менше 6 символів" id="password"></td>
               </tr>
               <tr>
-                  <td><label for="yourcity">Місто:</label></td>
+                  <td><label for="yourcity" class="form-city">Місто:</label></td>
                   <td>
-                      <label class="form-city">
-                          <select id="choose-cyty">
+                      <label class="select-2">
+                          <select class="input" id="choose-cyty">
                             <option value="city">Суми</option>
                             <option value="city">Хмельницький</option>
                             <option value="city">Львів</option>
@@ -131,15 +133,20 @@
               <tr>
                   <td>Стать:</td>
                   <td>
-                      <input type="radio" id="table-man" name="man" class="tdwm">
+                      <input type="radio" id="table-man" name="man" class="radio">
                       <label for="table-man">Чоловік</label>
-                      <input type="radio" id="table-woman" name="man" class="tdwm" checked>
+                      <input type="radio" id="table-woman" name="man" class="radio" checked>
                       <label for="table-woman">Жінка</label>
                   </td>
               </tr>
               <tr>
-                  <td><label for="photo">Фото:</label></td>
-                  <td class="take-ph"><label for="photo"></label><input type="file" class="photo" id="photo"></td>
+                  <td>
+                    <label for="photo">Фото:</label>
+                  </td>
+                  <td class="take-ph">
+                    <label for="photo"></label>
+                    <input type="file" class="photo" id="photo">
+                  </td>
               </tr>
               <tr>
                   <td><label for="flud">Коментарій:</label></td>
@@ -150,7 +157,7 @@
               </tr>
           </table>    
           </form>
-          <hr>
+          <hr class="hr">
         </div>
         <div class="form-5">
           <form action="index.html">
@@ -176,7 +183,7 @@
               <table class="form-country">
                 <tr>
                   <td class="country">
-                      <label class="table-2">Країна</label>
+                      <label class="table-2 select-3">Країна</label>
                       <select class="input">
                           <option value="Indonezia">Індонезія</option>
                           <option value="Україна">Україна</option>
@@ -204,10 +211,10 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>
-                    <input type="checkbox" class="i-agry" id="agry" value="Я погоджуюсь з правилами оплати та доставки товару">
-                    <label for="agry" class="agry">Я погоджуюсь з правилами оплати та доставки товару</label>
-                </td>
+                  <td colspan="3">
+                    <input type="checkbox" class="check-box" id="agry" value="Я погоджуюсь з правилами оплати та доставки товару">
+                    <label for="agry" class="i-agry">Я погоджуюсь з правилами оплати та доставки товару</label>
+                  </td>
                 </tr>
               </table>
             </form>
@@ -218,20 +225,22 @@
             </div>
         </div>
         <div class="form-6">
-          <form class="fixed" action="index.html">
+          <input type="checkbox" class="close-checkbox" value="close" id="close-checkbox">
+          
+          <form class="fixed" action="index.html" id="close" method="post">
             <h2>06. фіксована форма</h2>
-            <div class="fixed-form form">
-              <label class="close-label" for="close-checkbox"></label>
-              <label for="login">Логін</label>
-              <input class="fixed-input" type="name" id="login">
-              <label for="pass">Пароль</label>
-              <input class="fixed-input" id="pass" type="password">  
-              <a href="#">Забули пароль?</a>  
-              <input class="check" id="rem-pass" type="checkbox">                
-              <label class="rem-pass" for="rem-pass">Запам’ятати пароль</label>
-              <input class="register submit" type="submit" value="Увійти">
-            </div>
-          </form>
+            <div class="fix-form form">
+                  <label class="close-label" for="close-checkbox"></label>
+                <label for="login">Логін</label>
+                <input class="fix-input" type="name" id="login">
+                <label for="pass">Пароль</label>
+                <input class="fix-input" id="pass" type="password">  
+                <a href="#">Забули пароль?</a>  
+                <input class="check-box" id="rem-pass" type="checkbox">                
+                <label class="rem-pass" for="rem-pass">Запам’ятати пароль</label>
+                <input class=" submit" type="submit" value="Увійти">
+              </div>
+            </form>
         </div>
 
         
