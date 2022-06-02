@@ -57,15 +57,30 @@ hr {
 .select {
     position: relative;
 }
+
+
+.select select {
+    
+        position: relative;
+        appearance: none;
+        -webkit-appearance: none;
+        display: inline-block;
+        padding: 12px 17px;
+        width: 100%;
+        background-color: transparent;
+        border-radius: 3px;
+        
+    }
 .select:before {
+    
     content: "";
     position: absolute;
-    right: 5px;
+    right: 20px;
     background-color: #fff;
     top: 17px;
     border: 6px solid transparent;
-    border-top-color: #000;
-    z-index: 2;
+        border-top-color: #000;
+        z-index: 0;
 }
 .input:hover,
 .input:focus,
@@ -75,7 +90,7 @@ table textarea:focus,
 .fix-input:focus { 
     border-radius: 3px;
     filter: drop-shadow(0 0 2.5px rgba(62,106,255,0.55));
-    background-color: #ffffff;
+    
     border: 1px solid #3e6aff;
 }
 
@@ -96,6 +111,7 @@ textarea {
     border: none;
     cursor: pointer;
 }
+
 .form {
     display: flex;
     
@@ -321,17 +337,31 @@ input:checked:before {
 .select-2 {
     position: relative;
 }
+
+
+.select-2 select {
+    
+        position: relative;
+        appearance: none;
+        -webkit-appearance: none;
+        display: inline-block;
+        padding: 12px 17px;
+        width: 100%;
+        background-color: transparent;
+        border-radius: 3px;
+        
+    }
 .select-2:before {
+    
     content: "";
     position: absolute;
-    right: 5px;
+    right: 20px;
     background-color: #fff;
-    top: 3px;
+    top: 5px;
     border: 6px solid transparent;
     border-top-color: #000;
-    z-index: 2;
+    z-index: 0;
 }
-
 table textarea {
     resize: vertical;
     width: 90%;    
@@ -384,18 +414,33 @@ label.i-agry {
     margin: 0;
 }
 
-.select-3 {
+.country {
     position: relative;
 }
+select:hover {
+    background-color: none;
+}
+
+.country select {
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    display: inline-block;
+    padding: 12px 17px;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 3px;
+    
+    }
 .select-3:before {
     content: "";
     position: absolute;
-    left: 205px;
+    right: 20px;
     background-color: #fff;
-    top: 38px;
+    top: 41px;
     border: 6px solid transparent;
     border-top-color: #000;
-    z-index: 2;
+    z-index: 0;
 }
 .form-6 {
     position: fixed;
